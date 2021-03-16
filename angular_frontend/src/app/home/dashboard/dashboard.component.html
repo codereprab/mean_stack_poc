@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-4">
+        <app-mainnavigation [pageName]="'dashboard'"></app-mainnavigation>
+    </div>
+    <div class="col-md-8">
+        <main class="greyBox">
+          <form (ngSubmit) = "echoInput()" #dashboardForm="ngForm">
+            <div class="welcomeContainer">
+                <img src="/assets/images/profile.jpg" alt="">
+                <div class="hp">
+                    <h2>Welcome {{userDetails.customer.name}}</h2>
+                    <p><em>Last login: {{userDetails.customer.last_login}}</em></p>
+                </div>
+            </div>
+            <hr>
+            <h3 class="red">Account Balance: {{userDetails.customer.balance}}</h3>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let trans of userDetails.customer.transaction">
+                    <td>{{trans.date}}</td>
+                    <td>{{trans.desc}}</td>
+                    <td>{{trans.amount}}</td>
+                  </tr>
+                </tbody>
+            </table>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Subscribe to Alerts</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="SMSAlert" name="smsalertOption" id="SMSAlert" [(ngModel)]="smsalertOption">
+                        <label class="form-check-label" for="SMSAlert">
+                            SMS Alert
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="MarkettingNewsletter" name="newsleterOption" id="MarkettingNewsletter" [(ngModel)]="newsletterOption">
+                        <label class="form-check-label" for="MarkettingNewsletter">
+                            Marketting Newsletter
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Flyers" name="flyerOption" id="Flyers" [(ngModel)]="flyerOption">
+                        <label class="form-check-label" for="Flyers">
+                            Flyers
+                        </label>
+                    </div>
+                    <button class="button blue-button my-2" type="submit">Submit</button>
+                </div>
+                <div class="col-md-6">
+                    <label class="control-label h3" for="userid">Two Way Data Binding</label>
+                    <input type="text" class="form-control" name="twowaytest" id="twowaytest" [(ngModel)]="twowaytest" placeholder="Enter value for two way binding" />
+                </div>
+            </div>
+          </form>
+        </main>
+    </div>
+</div>

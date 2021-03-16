@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-4">
+        <app-mainnavigation [pageName]="'about'"></app-mainnavigation>
+    </div>
+    <div class="col-md-8">
+        <main class="greyBox">
+            <h1>About iJavaScript!</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/images/bg.jpg" width="255px">
+                </div>
+                <div class="col-md-8">
+                    <p>iJavascript is a research group, founded to check different Javascript frameworks based on different design patterns.</p>
+                    <p>During Kick-off it will test React, Angular, Knockout and Ember JS features. This use case will provide different aspects of framework capabilities.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Re-usable Component</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <app-reusable [componentId]="'first'"></app-reusable>
+                        </div>
+                        <div class="col-md-4">
+                            <app-reusable [componentId]="'second'"></app-reusable>
+                        </div>
+                        <div class="col-md-4">
+                            <app-reusable [componentId]="'third'"></app-reusable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-4">
+        <app-mainnavigation [pageName]="'team'"></app-mainnavigation>
+    </div>
+    <div class="col-md-8">
+        <main class="greyBox">
+            <h1>Meet the Team</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="memberContainer"  *ngFor="let teammember of team.teammembers">
+                        <div class="circleImg"><img src="assets/images/profile.jpg"></div>
+                        <div class="username">{{teammember.personName}}</div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div id="divChangingColor"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

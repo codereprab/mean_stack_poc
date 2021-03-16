@@ -1,0 +1,60 @@
+@media (min-width: 768px)
+    nav
+        min-height: 550px
+
+ul.navigation
+    margin-top: 20px
+
+ul.navigation li
+    padding-bottom: 20px
+    border-bottom: 1px solid #666
+    margin-bottom: 20px
+
+ul.navigation li:last-child
+    padding-bottom: 0px
+    border-bottom: none
+    margin-bottom: 0px
+
+ul.navigation a, ul.navigation a:link, ul.navigation a:visited, ul.navigation a:focus, ul.navigation a:active
+    color: #c00
+    font-size: 28px
+    font-weight: bold
+    text-decoration: none
+
+ul.navigation a:focus, ul.navigation a:active
+    color: #666
+
+ul.navigation li.activenavigation a, ul.navigation li.activenavigation:link, ul.navigation li.activenavigation:visited, 
+ul.navigation li.activenavigation:focus, ul.navigation li.activenavigation:active
+    color: #666
+    font-size: 28px
+    font-weight: bold
+    text-decoration: none
+
+@media (max-width: 767px)
+    nav
+        margin: 20px 0px
+    
+    ul
+        display: flex
+        margin: 0px
+        background-color: #f2f2f2
+        
+    ul li
+        width: 100%
+        text-align: center
+        padding-top: 20px
+        padding-bottom: 20px
+    
+    ul li a
+        color: #c00
+        font-size: 18px
+        font-weight: bold
+        text-decoration: none
+    
+    ul li.activenavigation
+        background-color: #c00
+
+    ul li.activenavigation a
+        color: #fff
+

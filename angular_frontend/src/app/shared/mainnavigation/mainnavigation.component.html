@@ -1,0 +1,14 @@
+<nav class="greyBox hidden-xs">
+    <ul class="navigation list-unstyled">
+        <li [ngClass]="( pageName === 'dashboard' ) ? 'activenavigation' : ''"><a routerLink="/dashboard">DASHBOARD</a></li>
+        <li [ngClass]="( pageName === 'about' ) ? 'activenavigation' : ''"><a routerLink="/about">ABOUT</a></li>
+        <li [ngClass]="( pageName === 'team' ) ? 'activenavigation' : ''"><a routerLink="/team">TEAM</a></li>
+    </ul>
+</nav>
+<nav class="hidden-sm hidden-md hidden-lg">
+    <ul class="list-inline">
+        <li [ngClass]="( pageName === 'dashboard' ) ? 'activenavigation list-inline-item' : 'list-inline-item'"><a routerLink="/dashboard">DASHBOARD</a></li>
+        <li [ngClass]="( pageName === 'about' ) ? 'activenavigation list-inline-item' : 'list-inline-item'"><a routerLink="/about">ABOUT</a></li>
+        <li [ngClass]="( pageName === 'team' ) ? 'activenavigation list-inline-item' : 'list-inline-item'"><a routerLink="/team">TEAM</a></li>
+    </ul>
+</nav>
